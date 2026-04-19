@@ -1,0 +1,17 @@
+direction,industry_name,industry_type,start_hour,end_hour,pollutants
+N,North Brick Works,Dust,6,18,PM10|PM2.5
+N,ABC Chemicals,Chemical,8,17,SO2|NOx
+S,South Agro Burn Yard,Biomass,5,9,PM2.5|PM10|CO
+S,South Textiles,Boiler,9,18,CO|NO2
+E,East Paint Plant,Chemical,10,19,NO2|CO
+E,East Metal Forge,Industrial,7,16,NOx|CO
+W,West Cement Plant,Dust,8,18,PM10
+W,West Food Boiler,Boiler,6,14,CO
+NE,Vatva Plant A,Chemical,0,23,SO2|NOx
+NE,Vatva Plant B,Industrial,8,20,CO|NO2
+NW,Sabarmati Mill,Industrial,9,17,PM10|CO
+NW,Sabarmati Furnace,Furnace,0,23,NOx|SO2
+SE,Narol Dyeing Unit,Dyeing,8,18,SO2|CO
+SE,Narol Plastics,Industrial,10,22,CO|NO2
+SW,Odhav Factory 1,Chemical,8,17,NO2|SO2
+SW,Odhav Biomass Yard,Biomass,5,8,PM2.5|PM10

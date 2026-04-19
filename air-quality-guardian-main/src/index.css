@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Environmental Monitoring Dashboard — Light, professional design system.
+   All colors MUST be HSL. */
+
+@layer base {
+  :root {
+    /* Vayu-Nirantar — Light theme with black ink + bluish-green accents */
+    --background: 165 30% 98%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    /* Brand: bluish-green (teal) on light surfaces */
+    --primary: 168 75% 32%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 168 55% 93%;
+    --primary-glow: 165 70% 45%;
+
+    --secondary: 165 25% 95%;
+    --secondary-foreground: 220 25% 15%;
+
+    --muted: 165 20% 94%;
+    --muted-foreground: 220 12% 40%;
+
+    --accent: 168 55% 93%;
+    --accent-foreground: 168 75% 22%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Status / AQI semantic tokens (light) */
+    --status-good: 158 70% 38%;
+    --status-good-soft: 158 60% 94%;
+    --status-moderate: 42 95% 48%;
+    --status-moderate-soft: 42 95% 94%;
+    --status-unhealthy: 24 90% 50%;
+    --status-unhealthy-soft: 24 90% 94%;
+    --status-hazardous: 0 75% 50%;
+    --status-hazardous-soft: 0 80% 95%;
+
+    --border: 165 18% 88%;
+    --input: 165 18% 88%;
+    --ring: 168 75% 32%;
+
+    --radius: 0.75rem;
+
+    --shadow-card: 0 1px 2px 0 hsl(220 25% 10% / 0.04), 0 1px 3px 0 hsl(220 25% 10% / 0.06);
+    --shadow-elevated: 0 8px 24px -4px hsl(168 75% 30% / 0.15), 0 2px 6px -1px hsl(220 25% 10% / 0.08);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 25% 20%;
+    --sidebar-primary: 168 75% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 165 25% 95%;
+    --sidebar-accent-foreground: 220 25% 15%;
+    --sidebar-border: 165 18% 88%;
+    --sidebar-ring: 168 75% 32%;
+  }
+
+  .dark {
+    /* Keep .dark identical to :root so any stray dark class still renders light */
+    --background: 165 30% 98%;
+    --foreground: 220 25% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+    --primary: 168 75% 32%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 168 55% 93%;
+    --secondary: 165 25% 95%;
+    --secondary-foreground: 220 25% 15%;
+    --muted: 165 20% 94%;
+    --muted-foreground: 220 12% 40%;
+    --accent: 168 55% 93%;
+    --accent-foreground: 168 75% 22%;
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 165 18% 88%;
+    --input: 165 18% 88%;
+    --ring: 168 75% 32%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 25% 20%;
+    --sidebar-primary: 168 75% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 165 25% 95%;
+    --sidebar-accent-foreground: 220 25% 15%;
+    --sidebar-border: 165 18% 88%;
+    --sidebar-ring: 168 75% 32%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
